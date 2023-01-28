@@ -34,11 +34,10 @@ ul {
 li {
       color: orange;
       font-weight: bold;
-      text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 }
 
 li img {
-      margin-top: 3px;
+      margin-top: 2px;
       margin-right: 5px;
 }
 
