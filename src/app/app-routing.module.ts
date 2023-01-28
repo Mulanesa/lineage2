@@ -12,7 +12,7 @@ import { FilesComponent } from './components/files/files.component';
 
 const routes: Routes = [
   {path: 'inicio', title: 'L2Name', component:InicioComponent},
-  {path: 'info', title: 'L2Name Informacion', component:InfoComponent},
+  {path: 'info', title: 'L2Name Info', component:InfoComponent},
   {path: 'registro', title: 'L2Name Registro', component:RegistroComponent},
   {path: 'files', title: 'L2Name Files', component:FilesComponent},
   {path: 'donaciones', title: 'L2Name Donaciones', component:DonacionesComponent},
