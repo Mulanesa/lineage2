@@ -172,10 +172,3 @@ h1 {
 .button:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
-
-
-/* NOTA */
-
-.testing {
-  margin: 50px;
-}

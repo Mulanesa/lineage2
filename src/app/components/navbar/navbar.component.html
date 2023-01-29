@@ -6,12 +6,54 @@
         </a>
         <div class="nav" id="navbarNav">
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link box" routerLink="/inicio">INICIO</a></li>
-            <li class="nav-item"><a class="nav-link box" routerLink="/info">INFO</a></li>
-            <li class="nav-item"><a class="nav-link box" routerLink="/registro">REGISTRO</a></li>
-            <li class="nav-item"><a class="nav-link box" routerLink="/files">FILES</a></li>
-            <li class="nav-item"><a class="nav-link box" routerLink="/donaciones">DONAR</a></li>
-            <li class="nav-item"><a class="nav-link box" routerLink="/contact">CONTACT</a></li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link box" 
+                  routerLinkActive="active-link"
+                  routerLink="/inicio"
+                  [routerLinkActiveOptions]="{exact: true}">INICIO
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                  class="nav-link box"
+                  routerLinkActive="active-link"
+                  routerLink="/info"
+                  [routerLinkActiveOptions]="{exact: true}">INFO
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link box" 
+                  routerLinkActive="active-link"
+                  routerLink="/registro"
+                  [routerLinkActiveOptions]="{exact: true}">REGISTRO
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link box" 
+                  routerLinkActive="active-link"
+                  routerLink="/files"
+                  [routerLinkActiveOptions]="{exact: true}">FILES
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link box" 
+                  routerLinkActive="active-link"
+                  routerLink="/donaciones"
+                  [routerLinkActiveOptions]="{exact: true}">DONAR
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link box" 
+                  routerLinkActive="active-link"
+                  routerLink="/contact"
+                  [routerLinkActiveOptions]="{exact: true}">CONTACT
+              </a>
+            </li>
           </ul>
         </div>
       </div>

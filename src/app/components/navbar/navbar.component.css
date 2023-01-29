@@ -88,3 +88,7 @@
   transition-delay: 0.4s;
   color: aliceblue;
 }
+
+.active-link {
+  background-color: #ffc506;
+}

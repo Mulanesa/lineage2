@@ -1,19 +1,128 @@
-<main>
-      <section class="container-fluid">
-            <div class="m-5 text-white text-center">
-                  <h1>Panel</h1>
-                  <p><i>- Registro, Recuperar e Cambiar contraseña</i></p>
-            </div>
+<main class="text-light" style="background-color: #8d866c85;">
+      <section class="container-fluid" style="padding-bottom: 25px;">
             <div class="row">
-                  <div class="col-md">
-                        <h2>Registro</h2>
+                  <div class="px-2 py-2">
+                        <h1 class="text-center">Registro</h1>
+                        <p class="text-center" style="font-size: 16px;"><i>Registro, Recuperar, Cambiar contraseña</i></p>
                   </div>
-                  <div class="col-md">
-                        <h2>Recuperar</h2>
+
+                  <!-- Registro -->
+
+                  <div class="col-md text-center">
+                        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                              <h2 class="fs-3 decorator_subtitle">Registrarse</h2>
+                              <hr class="hr">
+                              <div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Username</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="username" formControlName="username" class="form-control" id="floatingInput" placeholder="username">
+                                                <label for="username floatingInput">Username</label>
+                                          </div>
+                                          <div *ngIf="Username?.errors  && Username?.touched">
+
+                                                <p *ngIf="Username?.hasError('required')" class="error text-start ms-1">
+                                                      El nombre de usuario es requerido.
+                                                </p>
+                  
+                                                <p *ngIf="Username?.errors?.['minlength']" class="error text-start ms-1">
+                                                El nombre de usuario debe de ser de minimo 4 caracteres.
+                                                </p>
+                                          </div>
+                                    </div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Contraseña</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input class="form-control" type="password" formControlName="password" [class.border-danger]="MailValid" placeholder="Password" id="floatingPassword">
+                                                <label for="exampleInputPassword1 floatingPassword" class="form-label">Contraseña</label>
+                                          </div>
+                                          <div *ngIf="Password?.errors  && Password?.touched">
+                  
+                                                <p *ngIf="Password?.hasError('required')" class="error text-start ms-1">
+                                                La contraseña es requerida.
+                                                </p>
+                  
+                                                <p *ngIf="Password?.errors?.['minlength']" class="error text-start ms-1">
+                                                La contraseña debe de ser de minimo 8 caracteres.
+                                                </p>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <button type="submit" class="btn_md btn-danger hvr-underline-from-center">Registrarse</button>
+                                    </div>
+                              </div>
+                        </form>
                   </div>
-                  <div class="col-md">
-                        <h2>Cambiar<br>contraseña</h2>
+
+                  <!-- Recuperar -->
+
+                  <div class="col-md text-center">
+                        <form [formGroup]="form">
+                              <h2 class="fs-3 decorator_subtitle">Recuperar Cuenta</h2>
+                              <hr class="hr">
+                              <div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Correo</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="mail" formControlName="mail" class="form-control" id="floatingInput" placeholder="email@example.com">
+                                                <label for="mail floatingInput">Correo Electronico</label>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <button type="submit2" class="btn_md btn-danger hvr-underline-from-center">Recuperar</button>
+                                    </div>
+                              </div>
+                        </form>
                   </div>
+
+                  <!-- Cambiar contraseña -->
+
+                  <div class="col-md text-center">
+                        <form [formGroup]="form">
+                              <h2 class="fs-3 decorator_subtitle">Cambiar contraseña</h2>
+                              <hr class="hr">
+                              <div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Correo</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="mail" formControlName="mail" class="form-control" id="floatingInput" placeholder="email@example.com">
+                                                <label for="mail floatingInput">Correo Electronico</label>
+                                          </div>
+                                    </div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Contraseña</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="contraseña" class="form-control" id="floatingInput" placeholder="password">
+                                                <label for="contraseña floatingInput">Contraseña</label>
+                                          </div>
+                                    </div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Nueva Contraseña</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="contraseña" class="form-control" id="floatingInput" placeholder="password">
+                                                <label for="contraseña floatingInput">Nueva Contraseña</label>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <button type="submit2" class="btn_md btn-danger hvr-underline-from-center">Cambiar Contraseña</button>
+                                    </div>
+                              </div>
+                        </form>
+                  </div>
+
+
             </div>
       </section>
 </main>
