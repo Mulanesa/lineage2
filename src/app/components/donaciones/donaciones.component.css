@@ -1,0 +1,258 @@
+main {
+      -webkit-box-shadow: inset 0px 0px 40px 0px rgb(0, 0, 0);
+      -moz-box-shadow: inset 0px 0px 40px 0px rgb(0, 0, 0);
+      box-shadow: inset 0px 0px 40px 0px rgb(0, 0, 0);
+      background-color: hsla(0, 0%, 0%, 0.500);
+}
+
+.vh-100 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+/* Card Donate */
+.container__2 {
+  width: 800px;
+  height: 470px;
+}
+
+.terminal_toolbar {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+}
+
+.butt {
+  display: flex;
+  align-items: center;
+}
+
+.btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 8px;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.btn-color2 {
+  background: #ee411a;
+}
+
+.btn2:hover {
+  cursor: pointer;
+}
+
+.btn2:focus {
+  outline: none;
+}
+
+.butt--exit {
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+}
+
+.user {
+  color: #d5d0ce;
+  margin-left: 6px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.terminal_body {
+  background: rgba(56, 4, 40, 0.9);
+  height: calc(100% - 30px);
+  padding-top: 2px;
+  margin-top: -1px;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.terminal_promt {
+  display: flex;
+}
+
+.terminal_promt span {
+  margin-left: 4px;
+}
+
+.terminal_user {
+  color: #7eda28;
+}
+
+.terminal_location {
+  color: #4878c0;
+}
+
+.terminal_bling {
+  color: #dddddd;
+}
+
+.terminal_cursor {
+  display: block;
+  height: 14px;
+  width: 5px;
+  margin-left: 10px;
+  margin-top: 2px;
+  animation: curbl 1200ms linear infinite;
+}
+
+@keyframes curbl {
+  
+  0% {
+    background: #ffffff;
+  }
+
+  49% {
+    background: #ffffff;
+  }
+
+  60% {
+    background: transparent;
+  }
+
+  99% {
+    background: transparent;
+  }
+
+  100% {
+    background: #ffffff;
+  }
+} 
+
+.parent .container_terminal {
+  height: 325px;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.parent .terminal_body {
+  background: rgba(37, 36, 37, 0.6);
+}
+
+.parent .terminal_search {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: linear-gradient(#312f2d 0%, #20201f 100%);
+}
+
+/* Search Bar */
+
+.head_bar {
+  background-color: #1c1b1b;
+  padding: 7px;
+  margin-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+  color: white;
+}
+
+.refresh_bar {
+  color: white;
+  font-size: 15px;
+  margin-top: 1px;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.refresh_bar:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+  border-radius: 10px;
+}
+
+.input_search {
+  color: white;
+  background-color: rgb(75, 66, 66);
+  margin-left: 2px;
+  border-radius: 10px;
+  height: 20px;
+  width: 670px;
+  cursor: text;
+}
+
+.x_mark {
+  margin-left: 30px;
+  margin-right: 5px;
+  padding: 0px 5px 0px 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.x_mark:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+  border-radius: 10px;
+}
+
+.lock_icon {
+  color: white;
+  margin: 0px 5px 0px 5px;
+  cursor: pointer;
+}
+
+.lock_icon:hover {
+  color: gray;
+}
+
+.ellipsis {
+  padding-right: 3px;
+  margin-left: 5px;
+}
+
+/* Fake Page */
+
+.page_card {
+  width: 740px;
+  height: 185px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.page_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font_fakepage {
+  font-family: H77, Arial;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.63);
+}
+
+.a_decor {
+  color: greenyellow;
+  text-decoration: none;
+}
+
+.a_decor:hover {
+  color: rgba(85, 179, 31, 0.7);
+}
+
+.a_decor2 {
+  text-decoration: none;
+}
+
+.a_decor2:hover {
+  color: rgba(85, 179, 31, 0.7);
+}
