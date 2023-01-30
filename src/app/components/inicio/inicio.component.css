@@ -5,7 +5,12 @@
       text-shadow: 4px 4px 10px rgba(0,0,0,0.7);
 }
 
+.font_person {
+      font-family: H77, Arial;
+} 
+
 .lead {
+      color: lightblue;
       text-shadow: 4px 4px 10px rgba(0,0,0,0.7);
 }
 
