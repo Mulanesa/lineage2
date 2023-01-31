@@ -1,5 +1,5 @@
 <main class="text-light">
-      <section class="container-fluid vh-100" style="padding-bottom: 25px;">
+      <section class="container-fluid" style="padding-bottom: 25px;">
             <div class="row">
                   <div class="px-2 py-2">
                         <h1 class="text-center">Registro</h1>
@@ -24,7 +24,7 @@
                                           <div *ngIf="Username?.errors  && Username?.touched">
 
                                                 <p *ngIf="Username?.hasError('required')" class="error text-start ms-1">
-                                                      El nombre de usuario es requerido.
+                                                      El nombre de usuario es requerido.<br>Debe ser de minimo (4) caracteres.
                                                 </p>
                   
                                                 <p *ngIf="Username?.errors?.['minlength']" class="error text-start ms-1">
@@ -51,6 +51,23 @@
                                                 </p>
                                           </div>
                                     </div>
+                                    <div class="parent_ml">
+                                          <p class="mx_perso text-start">Correo</p>
+                                    </div>
+                                    <div class="m-3 pb-3">
+                                          <div class="form-floating">
+                                                <input type="email" formControlName="mail" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                <label for="email floatingInput">Correo Electronico</label>
+                                          </div>
+                                          <div *ngIf="Mail?.errors && Mail?.touched">
+                                                <p *ngIf="Mail?.hasError('required')" class="error text-start ms-1">
+                                                      El correo electronico es requerido.
+                                                </p>
+                                                <p *ngIf="Mail?.hasError('email')" class="error text-start ms-1">
+                                                      Correo Electronico invalido.
+                                                </p>
+                                          </div>
+                                    </div>
                                     <div>
                                           <button type="submit" class="btn_md btn-danger hvr-underline-from-center">Registrarse</button>
                                     </div>
@@ -61,7 +78,7 @@
                   <!-- Recuperar -->
 
                   <div class="col-md text-center">
-                        <form [formGroup]="form">
+                        <form [formGroup]="form2" (ngSubmit)="onEnviarF2($event)">
                               <h2 class="fs-3 decorator_subtitle">Recuperar Cuenta</h2>
                               <hr class="hr">
                               <div>
@@ -73,9 +90,19 @@
                                                 <input type="mail" formControlName="mail" class="form-control" id="floatingInput" placeholder="email@example.com">
                                                 <label for="mail floatingInput">Correo Electronico</label>
                                           </div>
+                                          <div *ngIf="Mail2?.errors  && Mail2?.touched">
+
+                                                <p *ngIf="Mail2?.hasError('required')" class="error text-start ms-1">
+                                                El correo electronico es requerido.
+                                                </p>
+                  
+                                                <p *ngIf="Mail2?.hasError('email')" class="error text-start ms-1">
+                                                Correo Electronico Invalido.
+                                                </p>
+                                          </div>
                                     </div>
                                     <div>
-                                          <button type="submit2" class="btn_md btn-danger hvr-underline-from-center">Recuperar</button>
+                                          <button type="submit" class="btn_md btn-danger hvr-underline-from-center">Recuperar</button>
                                     </div>
                               </div>
                         </form>
@@ -84,7 +111,7 @@
                   <!-- Cambiar contraseña -->
 
                   <div class="col-md text-center">
-                        <form [formGroup]="form">
+                        <form [formGroup]="form3" (ngSubmit)="onEnviarF3($event)">
                               <h2 class="fs-3 decorator_subtitle">Cambiar contraseña</h2>
                               <hr class="hr">
                               <div>
@@ -93,8 +120,18 @@
                                     </div>
                                     <div class="m-3 pb-3">
                                           <div class="form-floating">
-                                                <input type="mail" formControlName="mail" class="form-control" id="floatingInput" placeholder="email@example.com">
-                                                <label for="mail floatingInput">Username</label>
+                                                <input type="username" formControlName="username" class="form-control" id="floatingInput" placeholder="username">
+                                                <label for="username floatingInput">Username</label>
+                                          </div>
+                                          <div *ngIf="Username3?.errors  && Username3?.touched">
+
+                                                <p *ngIf="Username3?.hasError('required')" class="error text-start ms-1">
+                                                      El nombre de usuario es requerido.
+                                                </p>
+                  
+                                                <p *ngIf="Username3?.errors?.['minlength']" class="error text-start ms-1">
+                                                El nombre de usuario debe de ser de minimo 4 caracteres.
+                                                </p>
                                           </div>
                                     </div>
                                     <div class="parent_ml">
@@ -102,8 +139,18 @@
                                     </div>
                                     <div class="m-3 pb-3">
                                           <div class="form-floating">
-                                                <input type="contraseña" class="form-control" id="floatingInput" placeholder="password">
-                                                <label for="contraseña floatingInput">Contraseña</label>
+                                                <input type="password" class="form-control" id="floatingPassword" placeholder="password">
+                                                <label for="passwordf2 floatingPassword">Contraseña</label>
+                                          </div>
+                                          <div *ngIf="Password3?.errors  && Password3?.touched">
+                  
+                                                <p *ngIf="Password3?.hasError('required')" class="error text-start ms-1">
+                                                La contraseña es requerida.
+                                                </p>
+                  
+                                                <p *ngIf="Password3?.errors?.['minlength']" class="error text-start ms-1">
+                                                La contraseña debe de ser de minimo 8 caracteres.
+                                                </p>
                                           </div>
                                     </div>
                                     <div class="parent_ml">
@@ -111,12 +158,22 @@
                                     </div>
                                     <div class="m-3 pb-3">
                                           <div class="form-floating">
-                                                <input type="contraseña" class="form-control" id="floatingInput" placeholder="password">
-                                                <label for="contraseña floatingInput">Nueva Contraseña</label>
+                                                <input type="password" class="form-control" id="floatingPassword" placeholder="password">
+                                                <label for="passwordf3 floatingInput">Nueva Contraseña</label>
+                                          </div>
+                                          <div *ngIf="Password3?.errors  && Password3?.touched">
+                  
+                                                <p *ngIf="Password3?.hasError('required')" class="error text-start ms-1">
+                                                La nueva contraseña es requerida para cambiar la antigua.<br>Debe ser de minimo (8) caracteres.
+                                                </p>
+                  
+                                                <p *ngIf="Password3?.errors?.['minlength']" class="error text-start ms-1">
+                                                La nueva contraseña debe de ser de minimo 8 caracteres.
+                                                </p>
                                           </div>
                                     </div>
                                     <div>
-                                          <button type="submit2" class="btn_md btn-danger hvr-underline-from-center">Cambiar Contraseña</button>
+                                          <button type="submit" class="btn_md btn-danger hvr-underline-from-center">Cambiar Contraseña</button>
                                     </div>
                               </div>
                         </form>

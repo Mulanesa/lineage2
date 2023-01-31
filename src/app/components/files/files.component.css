@@ -23,14 +23,6 @@ hr {
       margin: 10px;
 }
 
-p {
-      font-family: H77, Arial;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 21px;
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.63);
-}
-
 .decorator_subtitle {
       font-family: H77, Arial;
       font-weight: bold;
@@ -52,8 +44,13 @@ h1 {
 }
 
 .mx_perso {
-      margin-left: 80px;
-      margin-right: 80px;
+  font-family: H77, Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 21px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.63);
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .fs-2 {
@@ -63,7 +60,9 @@ h1 {
 }
 
 
-
+.decoration_size {
+  text-decoration: underline orangered;
+}
 /* Boton Descarga */
 
 .button {

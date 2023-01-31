@@ -1,0 +1,11 @@
+p {
+      margin: 0px;
+}
+
+fa-icon {
+      color: white;
+}
+
+fa-icon:hover {
+      color: gray !important;;
+}

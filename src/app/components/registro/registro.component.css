@@ -8,6 +8,12 @@
       background-color: hsla(0, 0%, 0%, 0.500);
 }
 
+.background_prox {
+      height: 1299px;
+      width: 678px;
+      background-color: #181818;
+}
+
 ul {
       list-style: none;
 }
