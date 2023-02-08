@@ -10,7 +10,6 @@ import { DonacionesComponent } from './components/donaciones/donaciones.componen
 import { InfoComponent } from './components/info/info.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { RegistroComponent } from './components/registro/registro.component';
 import { FilesComponent } from './components/files/files.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { FilesComponent } from './components/files/files.component';
     InfoComponent,
     InicioComponent,
     FooterComponent,
-    RegistroComponent,
     FilesComponent
   ],
   imports: [

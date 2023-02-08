@@ -7,13 +7,11 @@ import { RouterLinkActive } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { InfoComponent } from './components/info/info.component';
 import { DonacionesComponent } from './components/donaciones/donaciones.component';
-import { RegistroComponent } from './components/registro/registro.component';
 import { FilesComponent } from './components/files/files.component';
 
 const routes: Routes = [
   {path: 'inicio', title: 'L2Name', component:InicioComponent},
   {path: 'info', title: 'L2Name Info', component:InfoComponent},
-  {path: 'registro', title: 'L2Name Registro', component:RegistroComponent},
   {path: 'files', title: 'L2Name Files', component:FilesComponent},
   {path: 'donaciones', title: 'L2Name Donaciones', component:DonacionesComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full'}
