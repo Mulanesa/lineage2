@@ -81,7 +81,7 @@ h1 {
   border-radius: 0.45em;
   font-family: "Arial";
   transition: background 0.3s;
-  cursor: pointer;
+  cursor: url(../../../assets/img/cursores/cursorl2help.cur), pointer;
   margin-left: 210px;
 }
 
@@ -145,6 +145,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: url(../../../assets/img/cursores/cursorl2help.cur), pointer;
 }
 
 .button:hover {

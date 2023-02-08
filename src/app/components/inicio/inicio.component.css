@@ -22,3 +22,7 @@
       height: 500px;
       width: 370px;
 }
+
+.btn {
+      cursor: url(../../../assets/img/cursores/cursorl2help.cur), pointer;
+}
